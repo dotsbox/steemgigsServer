@@ -12,14 +12,15 @@ RUN mkdir -p /var/app
 ADD package.json /var/app/
 
 RUN npm install -g nodemon
+
 RUN npm install
 
 COPY . /var/app
 
-RUN npm run startW
+#RUN npm run start
 
 ENV PORT 5000
 
 EXPOSE 5000
 
-# CMD [ "npm", "start" ]
+CMD [ "npm", "run", "start" ]
