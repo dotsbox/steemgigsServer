@@ -10,6 +10,8 @@ ENV DOCKER_TAG ${DOCKER_TAG}
 WORKDIR /var/app
 RUN mkdir -p /var/app
 ADD package.json /var/app/
+
+RUN npm install -g nodemon
 RUN npm install
 
 COPY . /var/app
